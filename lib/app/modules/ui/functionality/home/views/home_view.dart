@@ -22,7 +22,7 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 168.0,
+                    height: 166.8,
                     width: Get.size.width,
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
@@ -93,9 +93,9 @@ class HomeView extends GetView<HomeController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Hallo',
+                                      'Selamat datang',
                                       style: regular.copyWith(
-                                        fontSize: 12.8,
+                                        fontSize: 12.0,
                                         color: Colors.white70,
                                       ),
                                     ),
@@ -189,6 +189,147 @@ class HomeView extends GetView<HomeController> {
                       onPageChanged: (index, reason) {
                         controller.carouselIndex.value = index;
                       },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12.8),
+                    child: Container(
+                      height: 220,
+                      width: Get.width,
+                      color: Colors.white, // Replace with your desired color
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 20.0,
+                        horizontal: 26.8,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/logo-sgs.png', // Replace with your PNG image asset path
+                                height: 78.0,
+                                width: 78.0,
+                              ),
+                              const SizedBox(
+                                height: 14.0,
+                              ),
+                              Image.asset(
+                                'assets/images/logo-akr.png', // Replace with your PNG image asset path
+                                height: 68.0,
+                                width: 68.0,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 26.0,
+                          ),
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Peringkat Akreditasi',
+                                  style: semiBold.copyWith(
+                                    fontSize: 16.0,
+                                    color: secondColor,
+                                  ),
+                                ),
+                                Text(
+                                  'Terakreditasi B',
+                                  style: semiBold.copyWith(
+                                    fontSize: 13.8,
+                                    color: primaryColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 16.0,
+                                ),
+                                Text(
+                                  'Semua Program Studi yang ada telah terakreditasi B '
+                                  'oleh Badan Akreditasi Nasional Perguruan '
+                                  'Tinggi di Indonesia',
+                                  style: regular.copyWith(
+                                    fontSize: 12.8,
+                                    color:
+                                        secondColor, // Replace with your desired color
+                                    height: 2.0,
+                                  ),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 50.0,
+                    ),
+                    child: Container(
+                      width: Get.size.width,
+                      color: Colors.white,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.symmetric(
+                                  vertical: 14.0,
+                                  horizontal: 28.0,
+                                ),
+                                child: Image.asset(
+                                  'assets/images/logo-umt.png',
+                                  width: 68.0,
+                                  height: 68.0,
+                                ),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Visi & Misi',
+                                      style: bold.copyWith(
+                                        fontSize: 16.0,
+                                        color: secondColor,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6.0,
+                                    ),
+                                    Text(
+                                      'Menjadikan Universitas kelas Dunia\nyang Islami '
+                                      'berbasis Green Industry',
+                                      style: regular.copyWith(
+                                        fontSize: 12.8,
+                                        color: secondColor,
+                                        height: 2.0,
+                                      ),
+                                      textAlign: TextAlign.justify,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
